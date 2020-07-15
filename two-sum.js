@@ -1,18 +1,17 @@
-const twoSum = function(nums, target) {
-  let seen = new Set;
-  let result = [];
-  
-  for (let i in nums) {
-      if (seen.has(target - nums[i])) {
-          const match = [...seen].findIndex(num => num === (target - nums[i]))
-          result.push(match)
-          result.push(Number(i))
-      } else {
-          seen.add(nums[i])
-      }
+function twoSum(numbers, target) {
+    let seen = new Set;
+    let result = [];
+    
+    for (let i in numbers) {
+        if (seen.has(target - numbers[i])) {
+            const match = numbers.findIndex(num => num === (target - numbers[i]))
+            result.push(match)
+            result.push(Number(i))
+            return result
+        } else {
+            seen.add(numbers[i])
+        }
+    }
   }
-  
-  return result;
-};
 
 console.log(twoSum([1, 2, 5, 6, 7], 6), [0, 2])
