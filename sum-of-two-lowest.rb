@@ -20,3 +20,14 @@ end
 
 puts sum_two_smallest_numbers([5, 8, 12, 18, 22])
 puts 13
+puts sum_two_smallest_numbers([5, 8, 12, 18, 22, 4, 4])
+puts 8
+
+# correct answer
+
+def sum_two_smallest_numbers_correct numbers
+  numbers.min(2).sum
+end
+
+puts sum_two_smallest_numbers_correct([5, 8, 12, 18, 22, 4, 4])
+puts 8
