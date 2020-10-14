@@ -16,7 +16,8 @@ print('all assertions passed')
 # refactor
 
 def dna_strand(dna):
-  return dna.translate(str.maketrans("ATCG","TAGC"))
+  table = str.maketrans('ATGC', 'TACG')
+  return dna.translate(table)
 
 assert dna_strand("AAAA") == "TTTT"
 assert dna_strand("ATTGC") == "TAACG"
