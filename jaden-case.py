@@ -11,3 +11,6 @@ def jaden_casing(string):
   return ' '.join(word.capitalize() for word in string.split())
 
 print(jaden_casing('this too is a string, now capitalized'))
+
+# another other solution
+print('this too is a string, now capitalized'.title())
