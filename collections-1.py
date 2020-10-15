@@ -1,5 +1,3 @@
-
-
 from collections import Counter, deque
 
 c = Counter('qiouetyoqpoiwuyetyueiqwoeiytpewiqtoiyqwer')
@@ -14,9 +12,25 @@ print('most common:', c.most_common())
 
 # Write a Python program to create a new deque with three items and iterate over the deque's elements.
 deck = deque([1, 2, 3])
+print(deck)
 
 for each in deck:
   print(each)
+
+# Write a Python program to create a deque and append few elements to the left and right, then remove some elements from the left, right sides and reverse the deque.
+
+deck.append(4)
+deck.append(5)
+deck.append(6)
+deck.appendleft(0.5)
+deck.appendleft(0.4)
+deck.appendleft(0.3)
+deck.pop() # removes 6
+deck.pop() # removes 5
+deck.popleft() #removes 0.3
+deck.reverse()
+
+print(deck)
 
 # Write a Python program to find the occurrences of 10 most common words in a given text.
 
