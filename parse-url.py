@@ -1,7 +1,7 @@
 import re
 
 def domain_name(url):
-    return re.findall('(\w+://www.|\w+://|www.|)([\w\-]+)', 
+    return re.findall('(\w+://www.|\w+://|www.)?([\w\-]+)', 
                  url)[0][1]
 
 assert domain_name("google.com") == "google"
